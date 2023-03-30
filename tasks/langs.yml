@@ -1,0 +1,74 @@
+#asdf
+- name: Clone asdf repo
+  shell: git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
+  tags: asdf
+- name: Clone asdf repo
+  shell: git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
+  tags: asdf
+#python
+- name: Add python plugin
+  shell: asdf plugin-add python
+  tags: python
+- name: Install latest python release
+  shell: asdf install python latest
+  tags: python
+- name: Set latest python to global
+  shell: asdf global python latest
+  tags: python
+#ruby
+- name: Add ruby plugin
+  shell: asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+  tags: ruby
+- name: Install latest ruby release
+  shell: asdf install ruby latest
+  tags: ruby
+- name: Set latest ruby to global
+  shell: asdf global ruby latest
+  tags: ruby
+#node
+- name: Add nodejs plugin
+  shell: asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  tags: nodejs
+- name: Install latest nodejs release
+  shell: asdf install nodejs latest
+  tags: nodejs
+- name: Set latest nodejs to global
+  shell: asdf global nodejs latest
+  tags: nodejs
+#yarn
+- name: Add yarn plugin
+  shell: asdf plugin-add yarn
+  tags: yarn
+- name: Install latest yarn release
+  shell: asdf install yarn latest
+  tags: yarn
+- name: Set latest yarn to global
+  shell: asdf global yarn latest
+  tags: yarn
+#rust
+- name: Add rust plugin
+  shell: asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+  tags: rust
+- name: Install latest rust release
+  shell: asdf install rust latest
+  tags: rust
+- name: Set latest rust to global
+  shell: asdf global rust latest
+  tags: rust
+#Rust CLI tools
+- name: Install rust CLI tool exa
+  shell: cargo install exa
+- name: Install rust CLI tool fd-find
+  shell: cargo install fd-find
+- name: Install rust CLI tool procs
+  shell: cargo install procs
+- name: Install rust CLI tool du-dust
+  shell: cargo install du-dust
+- name: Install rust CLI tool ytop
+  shell: cargo install ytop
+- name: Install rust CLI tool tealdeer
+  shell: cargo install tealdeer
+- name: Install rust CLI tool bat
+  shell: cargo install bat
+- name: Install rust CLI tool ripgrep
+  shell: cargo install ripgrep

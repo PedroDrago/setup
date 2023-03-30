@@ -1,0 +1,6 @@
+- name: configure default branching
+  shell: git config --global init.defaultBranch main
+- name: configure color ui auto
+  shell: git config --global color.ui auto
+- name: Configure git core editor
+  shell: git config --global core.editor emacs

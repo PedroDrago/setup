@@ -1,0 +1,14 @@
+- name: Installing Stow
+  apt: name=stow
+  tags: stow
+- name: cloning .dotfiles repo
+  ansible.buitin.git:
+    repo: #
+    dest: #
+    recursive: yes
+    update: yes
+    accept_hostkey: yes
+    version: master
+  tags: dotgiles
+-name: stow dotfiles
+  shell: cd $HOME/.dotfiles && ./ubuntu #./ubuntu -> file which has the stowing script

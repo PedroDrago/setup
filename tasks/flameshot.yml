@@ -1,0 +1,3 @@
+- name: Install flameshot
+  become: true
+  apt: name=flameshot

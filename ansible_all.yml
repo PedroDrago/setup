@@ -1,0 +1,25 @@
+- hosts: localhost
+  pre_tasks:
+  - name: Update apt
+    become: true
+    apt:
+      force_apt_get: true
+      update_cache: true
+      state: present
+    tags:
+      - full
+  become_method: sudo
+  tasks:
+  - include: tasks/git.yml
+  - include: tasks/core.yml 
+  - include: tasks/chrome.yml
+  - include: tasks/firefox_developer.yml
+  - include: tasks/alacritty.yml
+  - include: tasks/obsidian.yml
+  - include: tasks/vscode.yml
+  - include: tasks/telegram.yml
+  - include: tasks/zsh.yml
+  - include: tasks/discord.yml
+  - include: tasks/asdf.yml
+  - include: tasks/flameshot.yml
+  - include: tasks/f_roll.yml

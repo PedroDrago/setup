@@ -1,0 +1,16 @@
+- name: Download Firefox .tar
+  shell: wget "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=pt-BR" -O firefox-developer.tar.bz2
+  tags: firefox_dev
+- name: Unzip firefox .tar
+  become: true
+  shell: tar -jxvf  firefox-developer.tar.bz2 -C /opt/
+  tags: firefox_dev
+- name: Move firefox location
+  shell: mv /opt/firefox*/ /opt/firefox-developer
+  tags: firefox_dev
+- name: firefox shortcut
+  shell: ln -sf /opt/firefox-developer/firefox /usr/bin/firefox-developer
+  tags: firefox_dev
+- name: firefox dont know what
+  shell: echo -e '[Desktop Entry]\n Version=yy.y.y\n Encoding=UTF-8\n Name=Mozilla Firefox\n Comment=Navegador Web\n Exec=/opt/firefox-developer/firefox\n Icon=/opt/firefox-developer/browser/chrome/icons/default/default128.png\n Type=Application\n Categories=Network' | sudo tee /usr/share/applications/firefox-developer.desktop
+  tags: firefox_dev

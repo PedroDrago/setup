@@ -1,0 +1,4 @@
+- name: Install Discord
+  become: true
+  shell: snap install discord
+  tags: discord
