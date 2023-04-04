@@ -5,4 +5,6 @@
 - name: Create i3 config directory
   shell: mkdir $HOME/.config/i3
   tags: i3wm
-
+- name: Instal i3lock
+  become: true
+  shell: apt install i3lock xautolock 
