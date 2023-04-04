@@ -10,5 +10,5 @@
     accept_hostkey: yes
     version: master
   tags: dotfiles
--name: stow dotfiles
+- name: stow dotfiles
   shell: cd $HOME/.dotfiles && bash stow_script.sh
