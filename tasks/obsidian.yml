@@ -8,3 +8,10 @@
 - name: Delete snapfile
   shell: $HOME/Downloads/obsidian.snap
   tags: obsidian
+
+
+#setup vault
+- name: Clone vault repo
+  shell: git clone https://github.com/PedroDrago/vault $HOME
+- name: Clone Notas Faculdade repo
+  shell: mkdir $HOME/repos && git clone https://github.com/PedroDrago/notas-faculdade $HOME/repos
