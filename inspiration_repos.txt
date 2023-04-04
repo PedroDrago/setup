@@ -1,2 +1,0 @@
-.dotfiles - https://github.com/ThePrimeagen/.dotfiles
-ansible - https://github.com/ThePrimeagen/ansible
