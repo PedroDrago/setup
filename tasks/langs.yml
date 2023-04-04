@@ -1,9 +1,9 @@
 #asdf
 - name: Clone asdf repo
-  shell: git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
+  shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.11.3
   tags: asdf
 - name: Clone asdf repo
-  shell: git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3
+  shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.11.3
   tags: asdf
 #python
 - name: Add python plugin
@@ -35,16 +35,6 @@
 - name: Set latest nodejs to global
   shell: asdf global nodejs latest
   tags: nodejs
-#yarn
-- name: Add yarn plugin
-  shell: asdf plugin-add yarn
-  tags: yarn
-- name: Install latest yarn release
-  shell: asdf install yarn latest
-  tags: yarn
-- name: Set latest yarn to global
-  shell: asdf global yarn latest
-  tags: yarn
 #rust
 - name: Add rust plugin
   shell: asdf plugin-add rust https://github.com/code-lever/asdf-rust.git

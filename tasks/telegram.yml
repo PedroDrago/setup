@@ -1,4 +1,4 @@
 - name: install telegram
   become: true
-  shell: apt install telegram
+  shell: apt install telegram-desktop
   tags: telegram

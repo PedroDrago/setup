@@ -1,7 +1,0 @@
-- name: Download Chrome .deb
-  shell: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  tags: chrome
-- name: Install chrome
-  become: true
-  shell: apt install ./google-chrome-stable_current_amd64.deb #should change this to apt buildtin
-  tags: chrome

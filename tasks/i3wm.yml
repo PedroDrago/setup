@@ -1,0 +1,8 @@
+
+- name: Install i3wm
+  become: true
+  shell: apt install i3
+  tags: i3wm
+- name: Create i3 config directory
+  shell: mkdir $HOME/.config/i3
+  tags: i3wm

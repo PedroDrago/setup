@@ -1,4 +1,0 @@
-.zshrc - ~
-.ssh - ~
-alacritty.yml - ~/.config/alacritty/alacritty.yml
-(i3) config - ~/.config/i3/config

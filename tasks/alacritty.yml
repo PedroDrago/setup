@@ -7,16 +7,19 @@
   become: true
   shell: sudo apt install alacritty
   tags: alacritty
+- name: Create alacritty config directory
+  shell: mkdir $HOME/.config/alacritty
+  tags: alacritty
 #Nerd Font
 - name: Download Meslo Regular
-  shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -o ~/.local/share/fonts/MesloLGS\ NF\ Regular.ttf
+  shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Regular.ttf
   tags: font
 - name: Download Meslo Bold
-  shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -o ~/.local/share/fonts/MesloLGS\ NF\ Bold.ttf
+  shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Bold.ttf
   tags: font
 - name: Download Meslo Italic
-  shell: curl -L curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -o ~/.local/share/fonts/MesloLGS\ NF\ Italic.ttf
+  shell: curl -L curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Italic.ttf
   tags: font
 - name: Download Meslo Bold Italic
-  shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -o ~/.local/share/fonts/MesloLGS\ NF\ Bold\ Italic.ttf
+  shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Bold\ Italic.ttf
   tags: font

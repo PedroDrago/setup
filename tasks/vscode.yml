@@ -1,6 +1,6 @@
 - name: Download Vscode .deb
-  shell: curl -L https://go.microsoft.com/fwlink/\?LinkID\=760868 -o ~/Downloads/code.deb
+  shell: curl -L https://go.microsoft.com/fwlink/\?LinkID\=760868 -o $HOME/Downloads/code.deb
   tags: vscode
 - name: Install Vscode
   become: true
-  shell: apt install ~/Downloads/code.deb
+  shell: apt install $HOME/Downloads/code.deb

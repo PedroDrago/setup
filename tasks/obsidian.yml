@@ -1,5 +1,5 @@
 - name: Download Obsidian Snap
-  shell: curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v1.1.16/obsidian_1.1.16_amd64.snap -o ~/Downloads/obsidian.snap
+  shell: curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v1.1.16/obsidian_1.1.16_amd64.snap -o $HOME/Downloads/obsidian.snap
   tags: obsidian
 - name: Install Obsidian
   become: true

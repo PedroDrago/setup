@@ -3,12 +3,12 @@
   tags: stow
 - name: cloning .dotfiles repo
   ansible.buitin.git:
-    repo: #
-    dest: #
+    repo: 'git@github.com:PedroDrago/.dotfiles.git'
+    dest: "$HOME/.dotfiles"
     recursive: yes
     update: yes
     accept_hostkey: yes
     version: master
-  tags: dotgiles
+  tags: dotfiles
 -name: stow dotfiles
-  shell: cd $HOME/.dotfiles && ./ubuntu #./ubuntu -> file which has the stowing script
+  shell: cd $HOME/.dotfiles && bash stow_script.sh
