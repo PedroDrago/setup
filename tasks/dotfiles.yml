@@ -2,7 +2,7 @@
   apt: name=stow
   tags: stow
 - name: Cloning .dotfiles
-  ansible.buitin.git:
+  ansible.builtin.git:
     repo: 'git@github.com:PedroDrago/.dotfiles.git'
     dest: "$HOME/.dotfiles"
     recursive: yes
