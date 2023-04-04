@@ -3,5 +3,8 @@
   tags: obsidian
 - name: Install Obsidian
   become: true
-  shell: snap install obsidian_1.1.9_amd64.snap --dangerous --classic
+  shell: snap install obsidian.snap --dangerous --classic
+  tags: obsidian
+- name: Delete snapfile
+  shell: $HOME/Downloads/obsidian.snap
   tags: obsidian

@@ -1,6 +1,30 @@
-- name: configure default branching
-  shell: git config --global init.defaultBranch main
-- name: configure color ui auto
-  shell: git config --global color.ui auto
-- name: Configure git core editor
-  shell: git config --global core.editor emacs
+- name: Git setup email
+  git_config:
+    name: user.email
+    scope: global
+    value: "93255861+PedroDrago@users.noreply.github.com"
+    tags: git
+- name: Git setup username
+  git_config:
+    name: user.name
+    scope: global
+    value: "Pedro Drago"
+    tags: git
+- name: Git setup branch
+  git_config:
+    name: init.defaultBranch
+    scope: global
+    value: "main"
+    tags: git
+- name: Git setup color
+  git_config:
+    name: color.ui
+    scope: global
+    value: "auto"
+    tags: git
+- name: Git setup editor
+  git_config:
+    name: core.editor
+    scope: global
+    value: "lvim"
+    tags: git
