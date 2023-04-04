@@ -1,6 +1,6 @@
-- name: enter sudo environment
-  shell: sudo -i
-  tags: f_roll
+# - name: enter sudo environment
+#   shell: sudo -i
+#   tags: f_roll
 - name: Write in hid_apple.conf file
   become: true
   shell: echo options hid_apple fnmode=2 > /etc/modprobe.d/hid_apple.conf
