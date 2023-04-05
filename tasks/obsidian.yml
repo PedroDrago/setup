@@ -13,5 +13,7 @@
 #setup vault - whole SSH process need to work to this task be successfull
 - name: Clone vault repo
   shell: git clone https://github.com/PedroDrago/vault $HOME
+  tags: obsidian
 - name: Clone Notas Faculdade repo
   shell: mkdir $HOME/repos && git clone https://github.com/PedroDrago/notas-faculdade $HOME/repos
+  tags: obsidian

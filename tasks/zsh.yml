@@ -12,7 +12,10 @@
   tags: zsh
 - name: Clone powerlevel10k
   shell: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k #should eventualy change this to git bult in
+  tags: zsh
 - name: Clone autosuggestion plugin
   shell: git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH/plugins/zsh-autosuggestions
+  tags: zsh
 - name: Clone syntax highlight plugin
   shell: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/plugins/zsh-syntax-highlighting
+  tags: zsh

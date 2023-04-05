@@ -48,17 +48,25 @@
 #Rust CLI tools
 - name: Install rust CLI tool exa
   shell: cargo install exa
+  tags: rust_tools
 - name: Install rust CLI tool fd-find
   shell: cargo install fd-find
+  tags: rust_tools
 - name: Install rust CLI tool procs
   shell: cargo install procs
+  tags: rust_tools
 - name: Install rust CLI tool du-dust
   shell: cargo install du-dust
+  tags: rust_tools
 - name: Install rust CLI tool ytop
   shell: cargo install ytop
+  tags: rust_tools
 - name: Install rust CLI tool tealdeer
   shell: cargo install tealdeer
+  tags: rust_tools
 - name: Install rust CLI tool bat
   shell: cargo install bat
+  tags: rust_tools
 - name: Install rust CLI tool ripgrep
   shell: cargo install ripgrep
+  tags: rust_tools

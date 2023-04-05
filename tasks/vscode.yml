@@ -4,5 +4,7 @@
 - name: Install Vscode
   become: true
   shell: apt install $HOME/Downloads/code.deb
+  tags: vscode
 - name: Delete vscodew deb
   shell: rm $HOME/Downloads/code.deb
+  tags: vscode

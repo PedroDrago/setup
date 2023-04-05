@@ -8,3 +8,4 @@
 - name: Instal i3lock
   become: true
   shell: apt install i3lock xautolock 
+  tags: i3wm
