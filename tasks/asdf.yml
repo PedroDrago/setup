@@ -45,6 +45,9 @@
 - name: Set latest rust to global
   shell: asdf global rust latest
   tags: rust
+- name: set correct rust version to the path
+  shell: bash $HOME/ansible/correct_rust_version.sh
+  tags: rust
 #Rust CLI tools
 - name: Install rust CLI tool exa
   shell: cargo install exa
