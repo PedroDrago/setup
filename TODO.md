@@ -1,5 +1,5 @@
-
-1. refatorar scripts ansible
-2. analisar se become: true ta certo, ou seja, garantir que todos os lugares que precisam de SUDO tenham.
-3. Testar task por task (chamando pelas tags) em uma VM para debuggar individualmente cada task
+1. Criar scripts bash especificos para cada sistema (ubuntu-desktop, WSL2, ubuntu-laptop):
+	- esses scripts terao um comando ansible `ansible-playbook local.yml --tags "tag1,tag2..."
+	- a ideia eh que todas as tasks (menos langs) estejam carregadas em local.yml, e cada script bash inclui/exclui as tags especificas.
+	- adicionar ao README os 3 quickinstalls especificos ja rodando o script bash indicado.
 

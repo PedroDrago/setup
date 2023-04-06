@@ -14,6 +14,22 @@
   - name: Clone asdf repo
     shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.11.3
     tags: asdf
+#dotnet-core
+  - name: Add Dotnet-core plugin
+    shell: asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
+    tags:
+    - asdf
+    - dotnet
+  - name: Install dotnet-core 6
+    shell: asdf install dotnet-core 6.0.407
+    tags: 
+    - asdf
+    - dotnet
+  - name: Install dotnet-core 6
+    shell: asdf global dotnet-core 6.0.407
+    tags: 
+    - asdf
+    - dotnet
   #python
   - name: Add python plugin
     shell: asdf plugin-add python
