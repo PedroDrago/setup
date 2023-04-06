@@ -11,6 +11,7 @@
     name: [i3lock, xautolock]  
   tags: i3wm
 - name: Install i3 blocks
+  become: true
   apt: name=i3blocks
   tags: i3wm
 - name: Get collection of scripts

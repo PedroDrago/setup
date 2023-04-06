@@ -12,7 +12,7 @@
   shell: mkdir $HOME/.config/alacritty
   tags: alacritty
 #Nerd Font
-  name: Create font file
+- name: Create font file
   shell: mkdir $HOME/.local/share/fonts
   tags: font
 - name: Download Meslo Regular
