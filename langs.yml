@@ -1,0 +1,131 @@
+- hosts: localhost
+  pre_tasks:
+  - name: Update apt
+    become: true
+    apt:
+      force_apt_get: true
+      update_cache: true
+      state: present
+    tags:
+      - full
+  become_method: sudo
+  tasks: 
+  #asdf
+  - name: Clone asdf repo
+    shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.11.3
+    tags: asdf
+  #python
+  - name: Add python plugin
+    shell: asdf plugin-add python
+    tags: 
+    - asdf
+    - python
+  - name: Install latest python release
+    shell: asdf install python latest
+    tags: 
+    - asdf
+    - python
+  - name: Set latest python to global
+    shell: asdf global python latest
+    tags: 
+    - asdf
+    - python
+  #ruby
+  - name: Add ruby plugin
+    shell: asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+    tags: 
+    - asdf
+    - ruby
+  - name: Install latest ruby release
+    shell: asdf install ruby latest
+    tags: 
+    - asdf
+    - ruby
+  - name: Set latest ruby to global
+    shell: asdf global ruby latest
+    tags: 
+    - asdf
+    - ruby
+  #node
+  - name: Add nodejs plugin
+    shell: asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+    tags: 
+    - asdf
+    - nodejs
+  - name: Install latest nodejs release
+    shell: asdf install nodejs latest
+    tags: 
+    - asdf
+    - nodejs
+  - name: Set latest nodejs to global
+    shell: asdf global nodejs latest
+    tags: 
+    - asdf
+    - nodejs
+  #rust
+  - name: Add rust plugin
+    shell: asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+    tags: 
+    - asdf
+    - rust
+  - name: Install latest rust release
+    shell: asdf install rust latest
+    tags: 
+    - asdf
+    - rust
+  - name: Set latest rust to global
+    shell: asdf global rust latest
+    tags: 
+    - asdf
+    - rust
+  - name: set correct rust version to the path
+    shell: bash $HOME/ansible/correct_rust_version.sh
+    tags: 
+    - asdf
+    - rust
+  #Rust CLI tools
+  - name: Install rust CLI tool exa
+    shell: cargo install exa
+    tags: 
+    - asdf
+    - rust_tools
+  - name: Install rust CLI tool fd-find
+    shell: cargo install fd-find
+    tags: 
+    - asdf
+    - rust_tools
+  - name: Install rust CLI tool procs
+    shell: cargo install procs
+    tags: 
+    - asdf
+    - rust_tools
+  - name: Install rust CLI tool du-dust
+    shell: cargo install du-dust
+    tags: 
+    - asdf
+    - rust_tools
+
+  - name: Install rust CLI tool ytop
+    shell: cargo install ytop
+    tags: 
+    - asdf
+    - rust_tools
+
+  - name: Install rust CLI tool tealdeer
+    shell: cargo install tealdeer
+    tags: 
+    - asdf
+    - rust_tools
+
+  - name: Install rust CLI tool bat
+    shell: cargo install bat
+    tags: 
+    - asdf
+    - rust_tools
+
+  - name: Install rust CLI tool ripgrep
+    shell: cargo install ripgrep
+    tags: 
+    - asdf
+    - rust_tools
+
