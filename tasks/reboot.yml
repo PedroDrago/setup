@@ -1,0 +1,4 @@
+- name: Reboot machine
+  become: true
+  shell: sudo reboot -f
+  tags: reboot

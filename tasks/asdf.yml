@@ -2,11 +2,6 @@
 - name: Clone asdf repo
   shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.11.3
   tags: asdf
-- name: Adding asdf to bash
-  shell: echo ". \"$HOME/.asdf/asdf.sh\"" >> $HOME/.bashrc && echo ". \"$HOME/.asdf/completions/asdf.bash\"" >> $HOME/.bashrc
-  tags: asdf
-- name: reset shell
-  shell: exec bash
 #python
 - name: Add python plugin
   shell: asdf plugin-add python
