@@ -5,7 +5,6 @@
     recursive: yes
     update: yes
     accept_hostkey: yes
-    version: master
   tags: dotfiles
 - name: Stow dotfiles
   shell: cd $HOME/.dotfiles && bash stow_script.sh

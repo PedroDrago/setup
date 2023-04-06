@@ -12,8 +12,10 @@
   tags: i3wm
 - name: Install i3 blocks
   apt: name=i3blocks
+  tags: i3wm
 - name: Get collection of scripts
   shell: git clone https://github.com/vivien/i3blocks-contrib $HOME/.config/i3blocks
+  tags: i3wm
 
   
   
