@@ -17,3 +17,5 @@
 - name: Clone Notas Faculdade repo
   shell: mkdir $HOME/repos && git clone https://github.com/PedroDrago/notas-faculdade $HOME/repos
   tags: obsidian
+- name: Symlink notas com obsidian
+  shell: ln -s $HOME/repos/notas-faculdade $HOME/vault

@@ -1,11 +1,12 @@
 #alacritty
 - name: Add alacritty repository to apt
   become: true
-  shell: sudo add-apt-repository ppa:aslatter/ppa
+  shell: add-apt-repository ppa:aslatter/ppa
   tags: alacritty
 - name: install alacritty
   become: true
-  shell: sudo apt install alacritty
+  ansible.builtin.apt:
+    name: alacritty
   tags: alacritty
 - name: Create alacritty config directory
   shell: mkdir $HOME/.config/alacritty

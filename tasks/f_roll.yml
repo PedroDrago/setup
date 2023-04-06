@@ -1,6 +1,3 @@
-# - name: enter sudo environment
-#   shell: sudo -i
-#   tags: f_roll
 - name: Write in hid_apple.conf file
   become: true
   shell: echo options hid_apple fnmode=2 > /etc/modprobe.d/hid_apple.conf
@@ -8,7 +5,4 @@
 - name: Update initramfs
   become: true
   shell: update-initramfs -u
-  tags: f_roll
-- name: Exit sudo environment
-  shell: exit
   tags: f_roll
