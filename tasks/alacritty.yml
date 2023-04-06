@@ -12,6 +12,9 @@
   shell: mkdir $HOME/.config/alacritty
   tags: alacritty
 #Nerd Font
+  name: Create font file
+  shell: mkdir $HOME/.local/share/fonts
+  tags: font
 - name: Download Meslo Regular
   shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Regular.ttf
   tags: font
@@ -19,7 +22,7 @@
   shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Bold.ttf
   tags: font
 - name: Download Meslo Italic
-  shell: curl -L curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Italic.ttf
+  shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Italic.ttf
   tags: font
 - name: Download Meslo Bold Italic
   shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Bold\ Italic.ttf
