@@ -25,6 +25,6 @@
   - include: tasks/zsh.yml
   - include: tasks/i3wm.yml
   - include: tasks/dotfiles.yml
-  - include: tasks/asdf.yml
+  - include: tasks/reboot.yml
 
  
