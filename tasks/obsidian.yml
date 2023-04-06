@@ -11,11 +11,8 @@
 
 #setup vault - whole SSH process need to work to this task be successfull
 - name: Clone vault repo
-  shell: git clone git@github.com:PedroDrago.vault.git $HOME/vault
+  shell: git clone git@github.com:PedroDrago/vault.git $HOME/vault
   tags: obsidian
 - name: Clone Notas Faculdade repo
-  shell: mkdir $HOME/repos && git clone https://github.com/PedroDrago/notas-faculdade $HOME/repos/notas-faculdade
-  tags: obsidian
-- name: Symlink notas com obsidian
-  shell: ln -s $HOME/repos/notas-faculdade $HOME/vault
+  shell: mkdir $HOME/repos && git clone git@github.com:PedroDrago/notas-faculdade.git $HOME/repos/notas-faculdade
   tags: obsidian
