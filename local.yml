@@ -13,6 +13,7 @@
       - full
   become_method: sudo
   tasks:
+  - include: tasks/host_key_script.yml 
   - include: tasks/ssh.yml
   - include: tasks/core.yml 
   - include: tasks/alacritty.yml
