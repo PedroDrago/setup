@@ -1,9 +1,10 @@
 - name: Download all Core apt packages
   become: true
   apt:
-    name: [build-essential, ca-certificates, gnupg, wget, libpq-dev, libssl-dev, fontconfig, imagemagick, libmagickwand-dev, ncurses-term, exuberant-ctags, make, zlib1g-dev, 
-libbz2-dev, libreadline-dev, libsqlite3-dev, llvm, libncursesw5-dev, xz-utils, tk-dev, libxml2-dev, libxmlsec1-dev, libffi-dev, libffi-dev, liblzma-dev,
-autoconf, bison, rustc, libyaml-dev, libyaml-dev, libreadline6-dev, libgmp-dev, libncurses5-dev, libgdbm6, libgdbm-dev, libdb-dev, uuid-dev, ubuntu-restricted-extras,]
+    name: [build-essential, ca-certificates, gnupg, wget, libpq-dev, libssl-dev, fontconfig, imagemagick, libmagickwand-dev, ncurses-term, 
+      exuberant-ctags, make, zlib1g-dev, libbz2-dev, libreadline-dev, libsqlite3-dev, llvm, libncursesw5-dev, xz-utils, tk-dev, libxml2-dev, 
+      libxmlsec1-dev, libffi-dev, libffi-dev, liblzma-dev, autoconf, bison, rustc, libyaml-dev, libyaml-dev, libreadline6-dev, libgmp-dev, 
+      libncurses5-dev, libgdbm6, libgdbm-dev, libdb-dev, uuid-dev, ubuntu-restricted-extras,]   
   tags: core
   
 - name: Download Nvidia Drivers
@@ -15,9 +16,8 @@ autoconf, bison, rustc, libyaml-dev, libyaml-dev, libreadline6-dev, libgmp-dev, 
 - name: Download General Tools
   become: true
   apt:
-    name: [fzf, flameshot, neovim, stow, lsof]
+    name: [fzf, flameshot, feh, neovim, stow, lsof]
   tags: general
 
 
 
-#playerctl libasound2-dev  pkg-config
