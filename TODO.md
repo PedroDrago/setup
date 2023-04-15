@@ -3,4 +3,6 @@
 	- a ideia eh que todas as tasks (menos langs) estejam carregadas em local.yml, e cada script bash inclui/exclui as tags especificas.
 	- adicionar ao README os 3 quickinstalls especificos ja rodando o script bash indicado.
 
-2. Achar alguma maneira de o script nao esperar meu input de YES no primeiro repositorio meu clonado. Deve ter alguma funcionalidade no builtin.git.
+2. Achar alguma maneira de o script nao esperar meu input de YES no primeiro repositorio meu clonado. Deve ter alguma funcionalidade no builtin.git. Esse problema acontece quando clonando Vault (nessa task), mas acredito que deve acontecer na clonagem do primeiro repositorio.
+
+3. Mudar isntalação do nvim (tirar da task core e adicionar task so para o nvim).
