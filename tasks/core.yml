@@ -16,7 +16,7 @@
 - name: Download General Tools
   become: true
   apt:
-    name: [fzf, flameshot, feh, neovim, stow, lsof]
+    name: [fzf, flameshot, feh, stow, lsof]
   tags: general
 
 
