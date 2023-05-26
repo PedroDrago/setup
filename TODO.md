@@ -1,7 +1,9 @@
 10. Modificar instalação do obsidian (método vale pra qualquer app em flatpak. Também verificar se algum app em snap ainda é necessario, e se for, migrar para flatpak)
     - Método consiste em instalar normalmento app via flatpak
     - Criar um symlink do binario flatpak para o path de binarios usr/bin, isso adiciona a aplicação no dmenu
-
+```bash
+sudo ln -s/var/lib/flatpak/exports/bin/chat.rocket.RocketChat /usr/bin/rocket-chat
+```
 
 1. Criar scripts bash especificos para cada sistema (ubuntu-desktop, WSL2, ubuntu-laptop):
 	- esses scripts terao um comando ansible `ansible-playbook local.yml --tags "tag1,tag2..."
