@@ -1,4 +1,7 @@
+- name: Download Discord Package
+  become: true
+  shell: curl -L https://discord.com/api/download\?platform\=linux\&format\=deb -o discord.deb
+  tags: discord
 - name: Install Discord
   become: true
-  shell: snap install discord
-  tags: discord
+  shell: apt install ./discord.deb

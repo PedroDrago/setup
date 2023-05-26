@@ -1,0 +1,9 @@
+- name: Add firefox keyrings
+  become: true
+  shell: apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
+- name: Add firefox repository
+  become: true
+  shell: apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
+- name: Install firefox
+  become: true
+  name: apt install firefox/bionic

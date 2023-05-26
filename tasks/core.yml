@@ -18,6 +18,8 @@
   apt:
     name: [fzf, flameshot, feh, stow, lsof]
   tags: general
-
+- name: Remove snaps
+  become: true
+  shell: apt purge snapd && rm -rf ~/snaps
 
 
