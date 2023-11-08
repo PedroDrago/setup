@@ -1,18 +1,10 @@
 - name: Download Obsidian Snap
-  shell: curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v1.1.16/obsidian_1.1.16_amd64.snap -o $HOME/Downloads/obsidian.snap
+  shell: curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/obsidian_1.4.16_amd64.deb -o obsidian.deb
   tags: obsidian
 - name: Install Obsidian
-  shell: sudo snap install $HOME/Downloads/obsidian.snap --dangerous --classic
+  become: true
+  shell: apt install ./obsidian.deb
   tags: obsidian
 - name: Delete snapfile
-  shell: rm $HOME/Downloads/obsidian.snap
-  tags: obsidian
-
-
-#setup vault - whole SSH process need to work to this task be successfull
-- name: Clone vault repo
-  shell: git clone git@github.com:PedroDrago/vault.git $HOME/vault
-  tags: obsidian
-- name: Clone Notas Faculdade repo
-  shell: mkdir $HOME/repos && git clone git@github.com:PedroDrago/notas-faculdade.git $HOME/repos/notas-faculdade
+  shell: rm -f obsidian.deb
   tags: obsidian

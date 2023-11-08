@@ -19,7 +19,6 @@
   - include: tasks/alacritty.yml
   - include: tasks/obsidian.yml
   - include: tasks/vscode.yml
-  - include: tasks/telegram.yml
   - include: tasks/discord.yml
   - include: tasks/docker.yml
   - include: tasks/nvim.yml
