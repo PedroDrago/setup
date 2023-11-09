@@ -1,9 +1,19 @@
-- name: Add firefox keyrings
+- name: Download firefox tar
   become: true
-  shell: apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
-- name: Add firefox repository
+  shell: curl -L https://download.mozilla.org/\?product\=firefox-latest-ssl\&os\=linux64\&lang\=pt-BR -o firefox.tar
+  tags: firefox
+
+- name: untar firefox tar
   become: true
-  shell: apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
-- name: Install firefox
+  shell: tar xjf firefox.tar
+  tags: firefox
+
+- name: move uncompressed firefox to /opt
   become: true
-  name: apt install firefox/bionic
+  shell: mv firefox /opt
+  tags: firefox
+
+- name: create symlink to firefox executable
+  become: true
+  shell: ln -s /opt/firefox/firefox /usr/local/bin/firefox
+  tags: firefox
