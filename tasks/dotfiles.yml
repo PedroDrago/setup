@@ -6,6 +6,6 @@
     update: yes
     accept_hostkey: yes
   tags: dotfiles
-- name: Stow dotfiles
-  shell: cd $HOME/.dotfiles && bash stow_script.sh
+- name: Setup dotfiles
+  shell: cd $HOME/.dotfiles/desktop && bash desktop_stow_script.sh
   tags: dotfiles
