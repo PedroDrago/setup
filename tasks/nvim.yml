@@ -1,7 +1,7 @@
 - name: Download appimage
   become: true
   shell: curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage && chmod u+x nvim.appimage && mv nvim.appimage /usr/bin/nvim
-  tags: nvidia
+  tags: nvim
 # - name: Fix error
 #   become: true
 #   shell: ./nvim.appimage --appimage-extract && ./squashfs-root/AppRun --version
