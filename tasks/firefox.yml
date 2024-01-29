@@ -1,6 +1,6 @@
-- name: Add firefox repo
+- name: Add firefox repo && remove firefx bin
   become: true
-  shell: sudo add-apt-repository ppa:mozillateam/ppa
+  shell: sudo add-apt-repository ppa:mozillateam/ppa && rm -f /usr/bin/firefox /bin/firefox
   tags: firefox
 
 - name: Prioritize APT package
