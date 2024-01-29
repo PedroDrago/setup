@@ -14,22 +14,6 @@
   - name: Clone asdf repo
     shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.11.3
     tags: asdf
-#dotnet-core
-  - name: Add Dotnet-core plugin
-    shell: asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
-    tags:
-    - asdf
-    - dotnet
-  - name: Install dotnet-core 6
-    shell: asdf install dotnet-core 6.0.407
-    tags: 
-    - asdf
-    - dotnet
-  - name: Install dotnet-core 6
-    shell: asdf global dotnet-core 6.0.407
-    tags: 
-    - asdf
-    - dotnet
   #python
   - name: Add python plugin
     shell: asdf plugin-add python
@@ -62,7 +46,7 @@
     tags: 
     - asdf
     - ruby
-  #node
+  #nodejs
   - name: Add nodejs plugin
     shell: asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
     tags: 
@@ -94,54 +78,24 @@
     tags: 
     - asdf
     - rust
-  - name: set correct rust version to the path
-    shell: bash $HOME/ansible/correct_rust_version.sh
-    tags: 
-    - asdf
-    - rust
-  #Rust CLI tools
-  - name: Install rust CLI tool exa
-    shell: cargo install exa
-    tags: 
-    - asdf
-    - rust_tools
-  - name: Install rust CLI tool fd-find
-    shell: cargo install fd-find
-    tags: 
-    - asdf
-    - rust_tools
-  - name: Install rust CLI tool procs
-    shell: cargo install procs
-    tags: 
-    - asdf
-    - rust_tools
-  - name: Install rust CLI tool du-dust
-    shell: cargo install du-dust
-    tags: 
-    - asdf
-    - rust_tools
-
-  - name: Install rust CLI tool ytop
-    shell: cargo install ytop
-    tags: 
-    - asdf
-    - rust_tools
-
   - name: Install rust CLI tool tealdeer
     shell: cargo install tealdeer
     tags: 
     - asdf
     - rust_tools
-
-  - name: Install rust CLI tool bat
-    shell: cargo install bat
+  #golang
+  - name: Add golang plugin
+    shell: asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
     tags: 
     - asdf
-    - rust_tools
-
-  - name: Install rust CLI tool ripgrep
-    shell: cargo install ripgrep
+    - golang
+  - name: Install latest golang release
+    shell: asdf install golang latest
     tags: 
     - asdf
-    - rust_tools
-
+    - golang
+  - name: Set latest golang to global
+    shell: asdf global golang latest
+    tags: 
+    - asdf
+    - golang

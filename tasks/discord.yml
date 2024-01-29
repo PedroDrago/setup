@@ -4,4 +4,7 @@
   tags: discord
 - name: Install Discord
   become: true
-  shell: apt install ./discord.deb
+  shell: apt install ./discord.deb && rm -f ./discord.deb
+- name: Disable discord Asking for configuration
+  become: true
+  shell: rm -f $HOME/.config/discord/settings.json && cp $HOME/ansible/settings.json $HOME/.config/discord/

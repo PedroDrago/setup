@@ -16,9 +16,12 @@
 - name: Download General Tools
   become: true
   apt:
-    name: [fzf, flameshot, feh, stow, lsof]
+    name: [fzf, bat, flameshot, ripgrep, exa, fd-find, feh, stow, lsof]
   tags: general
-
+- name: bottom
+  become: true
+  shell: curl -LO https://github.com/ClementTsang/bottom/releases/download/0.9.6/bottom_0.9.6_amd64.deb && sudo dpkg -i bottom_0.9.6_amd64.deb
+  tags: general
 - name: Remove snaps
   become: true
-  shell: apt purge snapd && rm -rf ~/snaps
+  shell: apt autoremove --purge snapd && apt autopurge snapd && apt-mark hold snapd
