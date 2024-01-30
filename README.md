@@ -7,5 +7,5 @@ sudo apt update && sudo apt upgrade -y && sudo apt install -y ansible curl git s
 
 ## Install Langs
 ```bash
-sudo ansible-playbook langs.yml
+sudo apt update && sudo apt pgrade -y && sudo ansible-playbook langs.yml
 ```
