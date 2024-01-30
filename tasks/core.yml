@@ -4,15 +4,18 @@
     name: [build-essential, curl, ca-certificates, gnupg, wget, libpq-dev, libssl-dev, fontconfig, imagemagick, libmagickwand-dev, ncurses-term, 
       exuberant-ctags, make, zlib1g-dev, libbz2-dev, libreadline-dev, libsqlite3-dev, llvm, libncursesw5-dev, xz-utils, tk-dev, libxml2-dev, 
       libxmlsec1-dev, libffi-dev, libffi-dev, liblzma-dev, autoconf, bison, rustc, libyaml-dev, libyaml-dev, libreadline6-dev, libgmp-dev, 
-      libncurses5-dev, libgdbm6, libgdbm-dev, libdb-dev, uuid-dev, ubuntu-restricted-extras,]   
+      libncurses5-dev, libgdbm6, libgdbm-dev, libdb-dev, uuid-dev, ubuntu-restricted-extras, libcurl4-openssl-dev, icu-devtools, libicu-dev,
+      libaio1, libtinfo5, libncurses5,numactl]   
   tags: core
-  
+- name: install other core package
+  become: true
+  shell: apt install linux-headers-$(uname -r)
+  tags: core
 - name: Download Nvidia Drivers
   become: true
   apt:
     name: [nvidia-driver-515, nvidia-dkms-515]
   tags: nvidia
-
 - name: Download General Tools
   become: true
   apt:
