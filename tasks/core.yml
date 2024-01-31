@@ -19,7 +19,7 @@
 - name: Download General Tools
   become: true
   apt:
-    name: [fzf, bat, flameshot, ripgrep, exa, fd-find, feh, stow, lsof]
+    name: [fzf, bat, arandr, flameshot, ripgrep, exa, fd-find, feh, stow, lsof]
   tags: general
 - name: bottom
   become: true
