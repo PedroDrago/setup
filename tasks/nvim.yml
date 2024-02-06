@@ -1,10 +1,7 @@
 - name: Download appimage
   become: true
-  shell: curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage && chmod u+x nvim.appimage
+  shell: curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage && chmod +x nvim.appimage
   tags: nvim
-- name: Fix error
-  become: true
-  shell: ./nvim.appimage --appimage-extract && ./squashfs-root/AppRun --version
 - name: Make nvim global
   become: true
   shell: mv nvim.appimage /usr/bin/nvim
