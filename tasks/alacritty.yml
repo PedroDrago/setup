@@ -1,4 +1,3 @@
-#alacritty
 - name: Add alacritty repository to apt
   become: true
   shell: add-apt-repository ppa:aslatter/ppa
@@ -11,7 +10,6 @@
 - name: Create alacritty config directory
   shell: mkdir $HOME/.config/alacritty
   tags: alacritty
-#Nerd Font
 - name: Create font file
   shell: mkdir $HOME/.local/share/fonts
   tags: font

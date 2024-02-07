@@ -1,6 +1,9 @@
 #asdf
 - name: Clone asdf repo
-  shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.11.3
+  shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.14.0
+  tags: asdf
+- name: Update asdf
+  shell: asdf update
   tags: asdf
 #python
 - name: Add python plugin
@@ -18,22 +21,6 @@
   tags: 
   - asdf
   - python
-#ruby
-- name: Add ruby plugin
-  shell: asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-  tags: 
-  - asdf
-  - ruby
-- name: Install latest ruby release
-  shell: asdf install ruby latest
-  tags: 
-  - asdf
-  - ruby
-- name: Set latest ruby to global
-  shell: asdf global ruby latest
-  tags: 
-  - asdf
-  - ruby
 #node
 - name: Add nodejs plugin
   shell: asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -66,54 +53,51 @@
   tags: 
   - asdf
   - rust
-- name: set correct rust version to the path
-  shell: bash $HOME/ansible/correct_rust_version.sh
+#golang
+- name: Add golang plugin
+  shell: asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
   tags: 
   - asdf
-  - rust
-#Rust CLI tools
-- name: Install rust CLI tool exa
-  shell: cargo install exa
+  - golang
+- name: Install latest golang release
+  shell: asdf install golang latest
   tags: 
   - asdf
-  - rust_tools
-- name: Install rust CLI tool fd-find
-  shell: cargo install fd-find
+  - golang
+- name: Set latest golang to global
+  shell: asdf global golang latest
   tags: 
   - asdf
-  - rust_tools
-- name: Install rust CLI tool procs
-  shell: cargo install procs
+  - golang
+#postgres
+- name: Add postgres plugin
+  shell: asdf plugin add postgres
   tags: 
   - asdf
-  - rust_tools
-- name: Install rust CLI tool du-dust
-  shell: cargo install du-dust
+  - postgres
+- name: Install latest postgres release
+  shell: asdf install postgres latest
   tags: 
   - asdf
-  - rust_tools
-
-- name: Install rust CLI tool ytop
-  shell: cargo install ytop
+  - postgres
+- name: Set latest postgres to global
+  shell: asdf global postgres latest
   tags: 
   - asdf
-  - rust_tools
-
-- name: Install rust CLI tool tealdeer
-  shell: cargo install tealdeer
+  - postgres
+#mysql
+- name: Add mysql plugin
+  shell: asdf plugin add mysql
   tags: 
   - asdf
-  - rust_tools
-
-- name: Install rust CLI tool bat
-  shell: cargo install bat
+  - mysql
+- name: Install latest mysql release
+  shell: asdf install mysql latest
   tags: 
   - asdf
-  - rust_tools
-
-- name: Install rust CLI tool ripgrep
-  shell: cargo install ripgrep
+  - mysql
+- name: Set latest mysql to global
+  shell: asdf global mysql latest
   tags: 
   - asdf
-  - rust_tools
-
+  - mysql
