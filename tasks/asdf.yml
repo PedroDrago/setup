@@ -1,7 +1,0 @@
-- name: Clone asdf repo
-  shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.14.0
-  tags: asdf
-
-- name: Update asdf
-  shell: asdf update
-  tags: asdf

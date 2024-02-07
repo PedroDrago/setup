@@ -22,6 +22,5 @@
   - include: tasks/f_roll.yml
   - include: tasks/zsh.yml
   - include: tasks/i3wm.yml
-  - include: tasks/asdf.yml
   - include: tasks/dotfiles.yml
   - include: tasks/reboot.yml

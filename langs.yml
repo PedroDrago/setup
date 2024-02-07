@@ -14,6 +14,14 @@
   - name: Disable discord Asking for configuration
     become: true
     shell: rm -f $HOME/.config/discord/settings.json && cp $HOME/ansible/scripts/settings.json $HOME/.config/discord/
+  #asdf
+  - name: Clone asdf repo
+    shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.14.0
+    tags: asdf
+
+  - name: Update asdf
+    shell: asdf update
+    tags: asdf
   #python
   - name: Add python plugin
     shell: asdf plugin-add python
