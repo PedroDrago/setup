@@ -2,6 +2,7 @@
   become: true
   shell: echo options hid_apple fnmode=2 > /etc/modprobe.d/hid_apple.conf
   tags: f_roll
+
 - name: Update initramfs
   become: true
   shell: update-initramfs -u

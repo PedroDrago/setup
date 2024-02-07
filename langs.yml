@@ -10,10 +10,6 @@
       - full
   become_method: sudo
   tasks: 
-  #asdf
-  - name: Clone asdf repo
-    shell: git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.14.0
-    tags: asdf
   #python
   - name: Add python plugin
     shell: asdf plugin-add python
@@ -30,23 +26,7 @@
     tags: 
     - asdf
     - python
-  #ruby
-  - name: Add ruby plugin
-    shell: asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-    tags: 
-    - asdf
-    - ruby
-  - name: Install latest ruby release
-    shell: asdf install ruby latest
-    tags: 
-    - asdf
-    - ruby
-  - name: Set latest ruby to global
-    shell: asdf global ruby latest
-    tags: 
-    - asdf
-    - ruby
-  #nodejs
+  #node
   - name: Add nodejs plugin
     shell: asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
     tags: 
@@ -78,11 +58,6 @@
     tags: 
     - asdf
     - rust
-  - name: Install rust CLI tool tealdeer
-    shell: cargo install tealdeer
-    tags: 
-    - asdf
-    - rust_tools
   #golang
   - name: Add golang plugin
     shell: asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
@@ -99,7 +74,7 @@
     tags: 
     - asdf
     - golang
-  #postgreSQL
+  #postgres
   - name: Add postgres plugin
     shell: asdf plugin add postgres
     tags: 
@@ -115,7 +90,7 @@
     tags: 
     - asdf
     - postgres
-  #MySQL
+  #mysql
   - name: Add mysql plugin
     shell: asdf plugin add mysql
     tags: 

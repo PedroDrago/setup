@@ -2,6 +2,7 @@
   become: true
   shell: curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage && chmod +x nvim.appimage
   tags: nvim
-- name: Make nvim global
+
+- name: Move Nvim binary to /usr/bin
   become: true
   shell: mv nvim.appimage /usr/bin/nvim

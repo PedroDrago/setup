@@ -1,11 +1,11 @@
 - name: Add firefox repo && remove firefx bin
   become: true
-  shell: sudo add-apt-repository ppa:mozillateam/ppa && rm -f /usr/bin/firefox /bin/firefox
+  shell: add-apt-repository ppa:mozillateam/ppa && rm -f /usr/bin/firefox /bin/firefox
   tags: firefox
 
 - name: Prioritize APT package
   become: true
-  shell: bash $HOME/ansible/firefox.sh
+  shell: bash $HOME/ansible/scripts/firefox.sh
   tags: firefox
 
 - name: Install package
@@ -15,7 +15,7 @@
 
 - name: Ensure snap version won't be installed
   become: true
-  shell: bash $HOME/ansible/firefox2.sh
+  shell: bash $HOME/ansible/scripts/firefox2.sh
   tags: firefox
 
 #https://askubuntu.com/questions/1399383/how-to-install-firefox-as-a-traditional-deb-package-without-snap-in-ubuntu-22/1404401#1404401

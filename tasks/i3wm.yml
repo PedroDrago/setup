@@ -2,21 +2,13 @@
   become: true
   apt: name=i3
   tags: i3wm
+
 - name: Create i3 config directory
   shell: mkdir $HOME/.config/i3
   tags: i3wm
+
 - name: Install i3lock
   become: true
   apt:
     name: [i3lock, xautolock]  
   tags: i3wm
-- name: Install i3 blocks
-  become: true
-  apt: name=i3blocks
-  tags: i3wm
-- name: Get collection of scripts
-  shell: git clone https://github.com/vivien/i3blocks-contrib $HOME/.config/i3blocks
-  tags: i3wm
-
-  
-  

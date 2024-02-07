@@ -4,7 +4,7 @@
   apt: name=zsh
   tags: zsh
 - name: Set zsh as defautl shell
-  user: name=drago shell=/usr/bin/zsh
+  user: name=pdrago shell=/usr/bin/zsh
   become: yes
   tags:
   - zsh
