@@ -1,5 +1,11 @@
 # README
 
+## For assurance:
+Change sudo timeout at `visudo`:
+```bash
+Defaults        env_reset,timestamp_timeout=60
+```
+
 ## Kickstart
 ```bash
 sudo apt update && sudo apt upgrade -y && sudo apt install -y ansible curl git software-properties-common && git clone https://github.com/PedroDrago/ansible && cd ansible && ansible-playbook --ask-vault-password local.yml
