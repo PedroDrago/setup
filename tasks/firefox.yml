@@ -10,7 +10,7 @@
 
 - name: Install package
   become: true
-  shell: apt install firefox
+  shell: apt install firefox -y
   tags: firefox
 
 - name: Ensure snap version won't be installed

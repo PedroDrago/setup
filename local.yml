@@ -18,7 +18,6 @@
   - include: tasks/core.yml 
   - include: tasks/alacritty.yml
   - include: tasks/discord.yml
-  - include: tasks/docker.yml
   - include: tasks/nvim.yml
   - include: tasks/f_roll.yml
   - include: tasks/zsh.yml

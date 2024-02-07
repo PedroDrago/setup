@@ -1,12 +1,8 @@
 - name: Download Discord Package
   become: true
-  shell: curl -L https://discord.com/api/download?platform=linux&format=deb -o discord.deb
+  shell: curl -L -o discord.deb https://discord.com/api/download?platform=linux&format=deb -o
   tags: discord
 
 - name: Install Discord
   become: true
-  shell: apt install ./discord.deb && rm -f ./discord.deb
-
-- name: Disable discord Asking for configuration
-  become: true
-  shell: rm -f $HOME/.config/discord/settings.json && cp $HOME/ansible/scripts/settings.json $HOME/.config/discord/
+  shell: apt install ./discord.deb -y && rm -f ./discord.deb

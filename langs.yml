@@ -10,6 +10,10 @@
       - full
   become_method: sudo
   tasks: 
+  #discord
+  - name: Disable discord Asking for configuration
+    become: true
+    shell: rm -f $HOME/.config/discord/settings.json && cp $HOME/ansible/scripts/settings.json $HOME/.config/discord/
   #python
   - name: Add python plugin
     shell: asdf plugin-add python
