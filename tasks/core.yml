@@ -33,3 +33,5 @@
 - name: Remove snaps
   become: true
   shell: apt autoremove --purge snapd && apt autopurge snapd && apt-mark hold snapd
+  when: success == false
+  ignore_errors: yes
