@@ -19,10 +19,11 @@
     mode: 0644
   tags: ssh
 
-- name: Set authorized key took from file
-  authorized_key:
-    user: "{{ lookup('env', 'USER') }}"
-    state: present
-    key: "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
-  with_fileglob:
-  - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
+#- name: Set authorized key took from file              - i dont know what this task does
+#  authorized_key:
+#    user: "{{ lookup('env', 'USER') }}"
+#    state: present
+#    key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
+#  with_fileglob:
+#  - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
+#  tags: ssh
