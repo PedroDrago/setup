@@ -5,7 +5,7 @@
 
 - name: Prioritize APT package
   become: true
-  shell: bash $HOME/ansible/scripts/firefox.sh
+  shell: bash $HOME/ansible/scripts/firefox
   tags: firefox
 
 - name: Install package
@@ -15,7 +15,7 @@
 
 - name: Ensure snap version won't be installed
   become: true
-  shell: bash $HOME/ansible/scripts/firefox2.sh
+  shell: bash $HOME/ansible/scripts/firefox2
   tags: firefox
 
 #https://askubuntu.com/questions/1399383/how-to-install-firefox-as-a-traditional-deb-package-without-snap-in-ubuntu-22/1404401#1404401
