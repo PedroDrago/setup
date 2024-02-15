@@ -28,11 +28,13 @@
     tags: 
     - asdf
     - python
+
   - name: Install latest python release
     shell: asdf install python latest
     tags: 
     - asdf
     - python
+
   - name: Set latest python to global
     shell: asdf global python latest
     tags: 
@@ -86,35 +88,3 @@
     tags: 
     - asdf
     - golang
-  #postgres
-  - name: Add postgres plugin
-    shell: asdf plugin add postgres
-    tags: 
-    - asdf
-    - postgres
-  - name: Install latest postgres release
-    shell: asdf install postgres latest
-    tags: 
-    - asdf
-    - postgres
-  - name: Set latest postgres to global
-    shell: asdf global postgres latest
-    tags: 
-    - asdf
-    - postgres
-  #mysql
-  - name: Add mysql plugin
-    shell: asdf plugin add mysql
-    tags: 
-    - asdf
-    - mysql
-  - name: Install latest mysql release
-    shell: asdf install mysql latest
-    tags: 
-    - asdf
-    - mysql
-  - name: Set latest mysql to global
-    shell: asdf global mysql latest
-    tags: 
-    - asdf
-    - mysql
