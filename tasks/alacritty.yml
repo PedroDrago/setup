@@ -32,3 +32,11 @@
 - name: Download Meslo Bold Italic
   shell: curl -L https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -o $HOME/.local/share/fonts/MesloLGS\ NF\ Bold\ Italic.ttf
   tags: font
+
+- name: fix locale bug 1
+  shell: export LANG=en_US.UTF-8
+  tags: locale
+
+- name: fix locale bug 2
+  shell: export LC_ALL=en_US.UTF-8
+  tags: locale
