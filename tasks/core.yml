@@ -22,7 +22,7 @@
 - name: Download General Tools
   become: true
   apt:
-    name: [vim, fzf, bat, tmux, arandr, flameshot, ripgrep, exa, fd-find, feh, stow, lsof]
+    name: [vim, tree, fzf, bat, tmux, arandr, flameshot, ripgrep, exa, fd-find, feh, stow, lsof]
   tags: general
 
 - name: bottom
