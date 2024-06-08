@@ -1,3 +1,3 @@
 bash $HOME/setup/omz_extensions.sh
 bash $HOME/setup/dotfiles.sh
-bash $HOME/setup/asdf.sh
+zsh $HOME/setup/asdf.sh

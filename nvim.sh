@@ -1,4 +1,4 @@
-echo "\033[32mRunning nvim.sh\033[0m"
+echo -e "\033[32mRunning nvim.sh\033[0m"
 git clone https://github.com/neovim/neovim.git $HOME/neovim
 cd $HOME/neovim
 git checkout release-0.10
