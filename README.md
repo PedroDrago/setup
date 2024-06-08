@@ -7,3 +7,10 @@ sudo apt update && sudo apt upgrade -y && sudo apt install git -y && git clone h
 
 # To-do
 - [ ] Test on VM
+
+
+# Tips
+Following commnad can be used if missed secure boot MOK enroll
+```bash
+sudo update-secureboot-policy --enroll-key
+```
