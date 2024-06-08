@@ -7,6 +7,6 @@ bash $HOME/setup/docker.sh
 bash $HOME/setup/home.sh
 bash $HOME/setup/zsh.sh
 zsh -c $HOME/setup/omz.sh
-zsh -c $HOME/setup/dotfiles.sh
-zsh -c $HOME/setup/asdf.sh
-zsh -c $HOME/setup/rust_tools.sh
+bash $HOME/setup/dotfiles.sh
+bash $HOME/setup/asdf.sh
+bash $HOME/setup/rust_tools.sh
