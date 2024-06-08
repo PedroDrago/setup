@@ -1,4 +1,4 @@
-bash $HOME/setup/core.sh
+bash $HOME/setup/installs.sh
 bash $HOME/setup/ssh.sh
 bash $HOME/setup/zsh.sh
 bash $HOME/setup/nvim.sh
