@@ -1,3 +1,4 @@
+source $HOME/.zshrc
 cargo install exa
 cargo instal bottom
 cargo install alacritty
