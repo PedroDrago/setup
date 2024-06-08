@@ -1,4 +1,0 @@
-- name: Reboot machine
-  become: true
-  shell: reboot -f
-  tags: reboot
