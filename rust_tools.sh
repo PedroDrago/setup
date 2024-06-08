@@ -1,3 +1,4 @@
+echo "\033[32mRunning rust_tools.sh\033[0m"
 source $HOME/.zshrc
 cargo install exa
 cargo instal bottom

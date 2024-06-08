@@ -1,3 +1,4 @@
+echo "\033[32mRunning docker.sh\033[0m"
 sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 
 #temporary. Because ubuntu 24.04 is not fully supported yet
 

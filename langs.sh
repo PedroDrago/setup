@@ -1,3 +1,4 @@
+echo "\033[32mRunning langs.sh\033[0m"
 source $HOME/.zshrc
 asdf plugin-add golang
 asdf install golang latest
