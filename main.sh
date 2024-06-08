@@ -6,4 +6,3 @@ bash $HOME/setup/vscode.deb
 bash $HOME/setup/docker.sh
 bash $HOME/setup/home.sh
 bash $HOME/setup/zsh.sh
-sudo reboot -f
