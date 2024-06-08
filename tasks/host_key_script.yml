@@ -1,3 +1,0 @@
-- name: Create ansible config file
-  shell: touch $HOME/.ansible.cfg && echo "[defaults]" >> $HOME/.ansible.cfg && echo "host_key_checking = False" >> $HOME/.ansible.cfg
-  tags: host_key
