@@ -1,4 +1,3 @@
-zsh -c "
 source $HOME/.zshrc
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 asdf update
@@ -20,4 +19,3 @@ asdf install rust latest
 asdf global rust latest
 
 asdf reshim
-"
