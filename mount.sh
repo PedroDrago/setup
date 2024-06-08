@@ -1,0 +1,1 @@
+#automount shared drive
