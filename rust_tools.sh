@@ -1,6 +1,6 @@
 echo -e "\033[32mRunning rust_tools.sh\033[0m"
 source $HOME/.zshrc
-cargo install exa
+cargo install eza
 cargo instal bottom
 cargo install alacritty
 asdf reshim
