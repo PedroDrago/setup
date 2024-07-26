@@ -5,7 +5,8 @@ source $HOME/.zshrc
 cargo install eza
 cargo instal bottom
 cargo install alacritty
-ln -s .local/share/mise/installs/rust/latest/bin/alacritty ~/usr/bin/alacritty
+sudo rm -f /usr/bin/alacritty
+sudo ln -s .local/share/mise/installs/rust/latest/bin/alacritty /usr/bin/alacritty
 
 # Go
 go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
