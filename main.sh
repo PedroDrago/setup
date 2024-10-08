@@ -5,7 +5,6 @@ bash $HOME/setup/chrome.deb
 bash $HOME/setup/firefox-dev.sh
 bash $HOME/setup/vscode.deb
 bash $HOME/setup/docker.sh
-bash $HOME/setup/home.sh
 bash $HOME/setup/omz.sh
 bash $HOME/setup/dotfiles.sh
 zsh $HOME/setup/mise.sh
