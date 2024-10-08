@@ -13,6 +13,6 @@ go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@lat
 go install github.com/air-verse/air@latest
 
 # Python
-pip install --upgrade pip
-pip install pipx
-pipx install uv --user
+# pip install --upgrade pip
+# pip install pipx
+# pipx install uv --user
