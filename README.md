@@ -7,7 +7,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install git -y && git clone h
 
 ## Kickstart WSL
 ```bash
-sudo apt update && sudo apt upgrade -y && sudo apt install git -y && git clone https://github.com/PedroDrago/setup.git $HOME/setup && cd $HOME/setup && git checkout wsl && bash ./main.sh
+sudo apt update && sudo apt upgrade -y && sudo apt install git -y && git clone https://github.com/PedroDrago/setup.git $HOME/setup && cd $HOME/setup && bash ./wsl.sh
 ```
 
 # Tips
