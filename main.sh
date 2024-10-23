@@ -1,5 +1,5 @@
 bash $HOME/setup/nvidia.sh
-bash $HOME/setup/main_installs.sh
+bash $HOME/setup/installs.sh
 bash $HOME/setup/i3.sh
 bash $HOME/setup/ssh.sh
 bash $HOME/setup/nvim.sh

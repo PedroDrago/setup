@@ -1,4 +1,4 @@
-bash $HOME/setup/wsl_installs.sh
+bash $HOME/setup/installs.sh
 bash $HOME/setup/ssh.sh
 bash $HOME/setup/nvim.sh
 bash $HOME/setup/docker.sh
