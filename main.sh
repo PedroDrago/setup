@@ -12,7 +12,7 @@ bash $HOME/setup/dotfiles.sh
 bash $HOME/setup/fonts.sh
 zsh $HOME/setup/mise.sh
 zsh $HOME/setup/langs.sh
-zsh $HOME/setup/packages.sh
+zsh $HOME/setup/eza.sh
 zsh $HOME/setup/alacritty.sh
 chsh -s $(which zsh)
 sudo reboot -f
