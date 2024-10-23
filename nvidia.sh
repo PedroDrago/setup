@@ -1,3 +1,5 @@
+echo -e "\033[32mRunning nvidia.sh\033[0m"
+
 # nvidia drivers
 sudo apt install nvidia-kernel-dkms -y
 sudo apt-add-repository contrib non-free non-free-firmware
