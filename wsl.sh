@@ -3,7 +3,7 @@ bash $HOME/setup/ssh.sh
 bash $HOME/setup/nvim.sh
 bash $HOME/setup/docker.sh
 bash $HOME/setup/omz.sh
-bash $HOME/setup/dotfiles.sh
+bash $HOME/setup/dotfiles.sh $1
 zsh $HOME/setup/mise.sh
 zsh $HOME/setup/langs.sh
 zsh $HOME/setup/eza.sh

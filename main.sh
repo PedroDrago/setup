@@ -8,7 +8,7 @@ bash $HOME/setup/firefox-dev.sh
 bash $HOME/setup/vscode.deb
 bash $HOME/setup/docker.sh
 bash $HOME/setup/omz.sh
-bash $HOME/setup/dotfiles.sh
+bash $HOME/setup/dotfiles.sh $1
 bash $HOME/setup/fonts.sh
 zsh $HOME/setup/mise.sh
 zsh $HOME/setup/langs.sh
