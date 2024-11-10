@@ -1,9 +1,10 @@
 echo -e "\033[32mRunning nvidia.sh\033[0m"
 
 
-HAS_GPU=$(lspci | grep -i nvidia)
+# I guess if someday I have a Radeon system I would need to adjust this to catch this cases.
+HAS_NVIDIA_GPU=$(lspci | grep -i nvidia)
 
-if [ ! -z "$HAS_GPU" ]
+if [ ! -z "$HAS_NVIDIA_GPU" ]
 then
     GPU=$(lspci | grep -i RTX | awk '{$8 = substr($8, 2); print $8, $9, $10, $11}')
     echo "NVIDIA Card ($GPU) Detected. Installing drivers..."
