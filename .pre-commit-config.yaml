@@ -5,6 +5,6 @@ repos:
   hooks:
     - id: check-encrypted
       name: Check if secret files are encrypted
-      entry: ./bash check_encrypted.sh
+      entry: ./.check_encryption.sh
       language: system
       files: ^.ssh/.*(?<!\.pub)$
