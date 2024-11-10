@@ -1,4 +1,3 @@
-bash $HOME/setup/nvidia.sh
 bash $HOME/setup/installs.sh
 bash $HOME/setup/i3.sh
 bash $HOME/setup/ssh.sh
