@@ -1,11 +1,18 @@
 echo -e "\033[32mRunning nvidia.sh\033[0m"
 
-# nvidia drivers
-sudo apt install nvidia-kernel-dkms -y
-sudo apt-add-repository contrib non-free non-free-firmware
-sudo apt update -y
-sudo apt install nvidia-driver firmware-misc-nonfree -y
 
-# secure boot DKMS MOK
-sudo mokutil --import /var/lib/dkms/mok.pub
-sudo mokutil --list-new
+HAS_GPU=$(lspci | grep -i nvidia)
+
+if [ ! -z "$HAS_GPU" ]
+then
+    GPU=$(lspci | grep -i RTX | awk '{$8 = substr($8, 2); print $8, $9, $10, $11}')
+    echo "NVIDIA Card ($GPU) Detected. Installing drivers..."
+    # nvidia drivers
+    sudo apt install nvidia-kernel-dkms -y
+    sudo apt-add-repository contrib non-free non-free-firmware
+    sudo apt update -y
+    sudo apt install nvidia-driver firmware-misc-nonfree -y
+    # secure boot DKMS MOK
+    sudo mokutil --import /var/lib/dkms/mok.pub
+    sudo mokutil --list-new
+fi
