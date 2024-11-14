@@ -1,9 +1,7 @@
 echo -e "\033[32mRunning alacritty.sh\033[0m"
 
-echo "[ALACRITTY] pre source: "
 cargo --version
-source $HOME/.zshrc
-echo "[ALACRITTY] post source: "
+source $HOME/.bashrc
 cargo --version
 cargo install alacritty
 sudo rm -f /usr/bin/alacritty

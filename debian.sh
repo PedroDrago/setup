@@ -10,9 +10,9 @@ bash $HOME/setup/docker.sh
 bash $HOME/setup/omz.sh
 bash $HOME/setup/dotfiles.sh
 bash $HOME/setup/fonts.sh
-zsh $HOME/setup/mise.sh
-zsh $HOME/setup/langs.sh
-zsh $HOME/setup/eza.sh
-zsh $HOME/setup/alacritty.sh
+bash $HOME/setup/mise.sh
+bash $HOME/setup/langs.sh
+bash $HOME/setup/eza.sh
+bash $HOME/setup/alacritty.sh
 chsh -s $(which zsh)
 sudo reboot -f
