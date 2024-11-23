@@ -12,7 +12,7 @@ elif [ ! -z "$IS_UBUNTU" ]
 then
     echo "We are on Ubuntu"
     bash $HOME/setup/ubuntu.sh
-elif [[ "$KERNEL" != *"WSL"* ]]
+elif [[ "$KERNEL" == *"WSL"* ]]
 then
     echo "We are on WSL" #check distro also? i guess it is not needed
     bash $HOME/setup/wsl.sh
