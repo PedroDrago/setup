@@ -1,7 +1,7 @@
 #automount shared drive
 
-exit 1 #This script is not prod ready
-LABEL="shared"
+# exit 1 #This script is not prod ready
+LABEL="Shared"
 MOUNT_POINT="/mnt/shared"
 FSTAB="/etc/fstab"
 
@@ -9,11 +9,15 @@ if [ ! -d "$MOUNT_POINT" ]; then
     sudo mkdir -p "$MOUNT_POINT"
 fi
 
-DEVICE=$(blkid -L "$LABEL")
+DEVICE=$(sudo blkid -L "$LABEL")
 
 if [ -z "$DEVICE" ]; then
-    echo "No device found with label '$LABEL'."
-    exit 1
+    LABEL="shared"
+    DEVICE=$(sudo blkid -L "$LABEL")
+    if [ -z "$DEVICE" ]; then
+        echo "No device found."
+        exit 1
+    fi
 fi
 
 sudo cp $FSTAB ${FSTAB}.backup.$(date +%Y%m%d%H%M%S)
