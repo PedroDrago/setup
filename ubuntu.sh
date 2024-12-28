@@ -13,5 +13,6 @@ bash $HOME/setup/mise.sh
 bash $HOME/setup/langs.sh
 bash $HOME/setup/eza.sh
 bash $HOME/setup/alacritty.sh
+bash $HOME/setup/ghostty.sh
 chsh -s $(which zsh)
 sudo reboot -f

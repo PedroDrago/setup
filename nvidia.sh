@@ -8,6 +8,8 @@ if [ ! -z "$HAS_NVIDIA_GPU" ]
 then
     GPU=$(lspci | grep -i RTX | awk '{$8 = substr($8, 2); print $8, $9, $10, $11}')
     echo "NVIDIA Card ($GPU) Detected. Installing drivers..."
+    # purge all current drivers
+    sudo apt purge nvidia-* -y
     # nvidia drivers
     sudo apt install nvidia-kernel-dkms -y
     sudo apt-add-repository contrib non-free non-free-firmware

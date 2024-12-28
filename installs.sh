@@ -14,6 +14,6 @@ then
 
 fi
 if [[ "$KERNEL" != *"WSL"* ]]; then # NOTE: maybe this could be checked if $DISTRO, need to check in WSL what is the output
-    sudo apt install flameshot pulseaudio arandr -y
+    sudo apt install flameshot pulseaudio arandr libgtk-4-dev libadwaita-1-dev -y
 fi
 
