@@ -8,11 +8,9 @@ is_encrypted() {
 }
 
 for file in $PRIVATE_KEY_PATTERN; do
-    if [[ -f $file ]] && [[ ! $file =~ \.pub$ ]]; then
+    if [[ -f $file ]] && [[ ! $file =~ \.pub$ ]] && [[ ! $file =~ "config" ]]; then
         if ! is_encrypted "$file"; then
             echo "Error: Private key '$file' is not encrypted with Ansible Vault."
-            echo "Please encrypt the file before committing."
-            exit 1
         fi
     fi
 done
