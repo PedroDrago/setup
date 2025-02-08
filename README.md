@@ -12,4 +12,5 @@ sudo echo -e "deb http://deb.debian.org/debian/ bookworm main contrib non-free-f
 
 ## To-do
 
-I guess the Ideal would be hosting a version in a URL where I could do `curl -LsSf https://drago.com/setup.sh | sh`
+- [ ] I guess the Ideal would be hosting a version in a URL where I could do `curl -LsSf https://drago.com/setup.sh | sh` instead of executing this blocks of bash.
+- [ ] Fix cargo install eza and alacritty
