@@ -1,4 +1,5 @@
 echo -e "\033[32mRunning nvidia.sh\033[0m"
+export ACCEPT_EULA=Y 
 
 
 # I guess if someday I have a Radeon system I would need to adjust this to catch this cases.
