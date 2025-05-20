@@ -1,3 +1,4 @@
+cd $HOME/setup && git remote rm origin && git remote add origin git@github.com:pedrodrago/setup.git && cd -
 bash $HOME/setup/arch/installs.sh
 bash $HOME/setup/arch/yay.sh
 bash $HOME/setup/arch/yay_installs.sh
