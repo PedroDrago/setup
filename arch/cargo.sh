@@ -7,4 +7,4 @@ cargo install alacritty # Why this does not work?
 sudo rm -f /usr/bin/alacritty
 sudo ln -s .local/share/mise/installs/rust/latest/bin/alacritty /usr/bin/alacritty
 cargo install ripgrep # Why this does not work?
-cargo install fdfind # Why this does not work?
+cargo install fd-find # Why this does not work?

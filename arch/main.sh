@@ -1,4 +1,4 @@
-DISTRO=$(cat /proc/version)
+eISTRO=$(cat /proc/version)
 KERNEL=$(uname -r)
 
 IS_DEBIAN=$(echo "$DISTRO" | grep -i debian)
