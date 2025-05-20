@@ -1,14 +1,11 @@
 echo -e "\033[32mRunning citrix.sh\033[0m"
 
-sudo pacman -S icaclient
+yay -S icaclient
 
-sudo cp ./wfica.desktop /usr/share/applications/wfica.desktop
+sudo cp $HOME/setup/arch/wfica.desktop /usr/share/applications/wfica.desktop # TODO: alter
 
-# cd /opt/Citrix/ICAClient/keystore/cacerts/
-# cp /etc/ca-certificates/extracted/tls-ca-bundle.pem .
-# awk 'BEGIN {c=0;} /BEGIN CERT/{c++} { print > "cert." c ".pem"}' < tls-ca-bundle.pem
+cd /opt/Citrix/ICAClient/keystore/cacerts/ && cp /etc/ca-certificates/extracted/tls-ca-bundle.pem . && awk 'BEGIN {c=0;} /BEGIN CERT/{c++} { print > "cert." c ".pem"}' < tls-ca-bundle.pem
 
-sudo cp /etc/ca-certificates/extracted/tls-ca-bundle.pem /opt/Citrix/ICAClient/keystore/cacerts/
-sudo awk 'BEGIN {c=0;} /BEGIN CERT/{c++} { print > "cert." c ".pem"}' < tls-ca-bundle.pem
+sudo ln -s /opt/Citrix/ICAClient/wfica /usr/bin/citrix
 
 # https://wiki.archlinux.org/title/Citrix
