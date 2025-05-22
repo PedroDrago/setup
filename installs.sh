@@ -18,3 +18,7 @@ if [[ "$KERNEL" != *"WSL"* ]]; then # NOTE: maybe this could be checked if $DIST
     sudo apt install flameshot pulseaudio arandr libgtk-4-dev libadwaita-1-dev -y
 fi
 
+
+if [[ "$KERNEL" == *"WSL"* ]]; then
+    sudo apt install libasound2 #obsidian in wsl2
+fi
