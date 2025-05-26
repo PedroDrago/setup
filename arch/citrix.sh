@@ -1,4 +1,5 @@
 echo -e "\033[32mRunning citrix.sh\033[0m"
+set -e
 
 yay -S icaclient
 

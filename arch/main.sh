@@ -1,3 +1,4 @@
+set -e
 cd $HOME/setup && git remote rm origin && git remote add origin git@github.com:pedrodrago/setup.git && cd -
 
 MACHINE="-"

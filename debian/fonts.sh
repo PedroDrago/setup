@@ -1,4 +1,5 @@
 echo -e "\033[32mRunning fonts.sh\033[0m"
+set -e
 
 
 echo -e "\033[33m[WARNING]: current downloading v3.2.1 as a hardcoded URL; a newer version may exist\033[0m"

@@ -1,3 +1,4 @@
+set -e
 DISTRO=$(cat /proc/version)
 KERNEL=$(uname -r)
 

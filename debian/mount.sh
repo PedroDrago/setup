@@ -1,4 +1,5 @@
 #automount shared drive
+set -e
 
 # exit 1 #This script is not prod ready
 LABEL="Shared"
