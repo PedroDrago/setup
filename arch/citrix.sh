@@ -8,4 +8,6 @@ cd /opt/Citrix/ICAClient/keystore/cacerts/ && sudo cp /etc/ca-certificates/extra
 
 sudo ln -s /opt/Citrix/ICAClient/wfica /usr/bin/citrix
 
+# TODO: add final step that is printed in red and i forgot to save
+
 # https://wiki.archlinux.org/title/Citrix
