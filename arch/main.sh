@@ -6,13 +6,14 @@ if lscpu | grep "Model name" | grep -q "i7-8700"; then
     MACHINE="desktop"
 fi
 
-pacman -Syu --noconfirm
+pacman -Syu --noconfirm 
+pacman -S --noconfirm --needed git base-devel
 bash $HOME/setup/arch/yay.sh
 bash $HOME/setup/arch/installs.sh
 bash $HOME/setup/arch/ssh.sh
 bash $HOME/setup/arch/nvim.sh
-if [[ "$KERNEL" == *"WSL"* ]]
-    if [[ "$MACHINE" != "desktop" ]]
+if [[ "$KERNEL" == *"WSL"* ]]; then
+    if [[ "$MACHINE" != "desktop" ]]; then
         bash $HOME/setup/arch/hyprland.sh
     fi
     bash $HOME/setup/arch/i3.sh
