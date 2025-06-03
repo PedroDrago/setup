@@ -22,6 +22,7 @@ bash $HOME/setup/arch/omz.sh
 bash $HOME/setup/arch/mise.sh
 bash $HOME/setup/arch/dotfiles.sh
 bash $HOME/setup/arch/langs.sh
+bash $HOME/setup/arch/bluetooth.sh
 chsh -s $(/usr/bin/zsh)
 cd $HOME/setup && git remote rm origin && git remote add origin git@github.com:pedrodrago/setup.git
 sudo reboot -f
