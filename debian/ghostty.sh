@@ -1,4 +1,5 @@
 echo -e "\033[32mRunning ghostty.sh\033[0m"
+set -e
 
 
 echo -e "\033[32mCheck if deb package already supported\033[0m"

@@ -1,4 +1,5 @@
 echo -e "\033[32mRunning yay.sh\033[0m"
+set -e
 
 git clone https://aur.archlinux.org/yay.git $HOME/yay
 cd $HOME/yay

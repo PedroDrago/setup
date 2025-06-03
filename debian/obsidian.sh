@@ -1,4 +1,5 @@
 echo -e "\033[32mRunning obsidian.sh\033[0m"
+set -e
 
 curl -Lo obsidian.deb https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.10/obsidian_1.8.10_amd64.deb
 sudo apt install ./obsidian.deb -y

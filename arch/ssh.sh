@@ -1,4 +1,5 @@
 echo -e "\033[32mRunning ssh.sh\033[0m"
+set -e
 
 SSH_DIR="$HOME/.ssh"
 FILES="$SSH_DIR/azure/id_rsa $SSH_DIR/github/id_rsa" #substitute for automation that finds all id_rsa files inside sshdir

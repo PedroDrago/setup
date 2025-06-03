@@ -1,4 +1,5 @@
 echo -e "\033[32mRunning eza.sh\033[0m"
+set -e
 
 
 # eval $(/home/pdrago/.local/bin/mise activate bash) # FIX: didnt work

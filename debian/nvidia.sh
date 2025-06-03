@@ -1,4 +1,5 @@
 echo -e "\033[32mRunning nvidia.sh\033[0m"
+set -e
 export ACCEPT_EULA=Y 
 
 

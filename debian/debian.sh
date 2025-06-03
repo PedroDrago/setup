@@ -1,3 +1,4 @@
+set -e
 bash $HOME/setup/debian/installs.sh
 bash $HOME/setup/debian/i3.sh
 bash $HOME/setup/debian/ssh.sh
