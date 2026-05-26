@@ -8,7 +8,7 @@ mkdir -p "$HOME/.ssh/github"
 chmod 700 "$HOME/.ssh"
 chmod 700 "$HOME/.ssh/github"
 
-cat > "$SSH_DIR/config" <<'EOF'
+cat > "$HOME/.ssh/config" <<'EOF'
 Host github.com
     HostName github.com
     User git
