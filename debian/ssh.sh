@@ -1,13 +1,32 @@
+#!/usr/bin/env bash
 echo -e "\033[32mRunning ssh.sh\033[0m"
-set -e
 
-SSH_DIR="$HOME/.ssh"
-FILES="$SSH_DIR/azure/id_rsa $SSH_DIR/github/id_rsa" #substitute for automation that finds all id_rsa files inside sshdir
-TARGET_DIR="$HOME/setup/.ssh"
-# Find all id_rsa files recursively and store them in a single string
+set -euo pipefail
 
-rm -rf $HOME/.ssh
-cp -r "$HOME/setup/.ssh" $HOME/.ssh
-RSA_FILES=$(find "$SSH_DIR" -type f -name "id_rsa" -print | tr '\n' ' ')
+mkdir -p "$HOME/.ssh/github"
 
-ansible-vault decrypt $RSA_FILES
+chmod 700 "$HOME/.ssh"
+chmod 700 "$HOME/.ssh/github"
+
+cat > "$SSH_DIR/config" <<'EOF'
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github/key
+    IdentitiesOnly yes
+EOF
+
+ssh-keygen \
+  -t ed25519 \
+  -a 100 \
+  -C "contact@pedrodrago.com" \
+  -f "$HOME/.ssh/github/key"
+
+chmod 600 "$HOME/.ssh/github/key"
+chmod 644 "$HOME/.ssh/github/key.pub"
+
+echo
+echo "Register the public key above in GitHub:"
+cat "$HOME/.ssh/github/key.pub"
+echo
+read -r -p "Press Enter after registering the key in GitHub..."
