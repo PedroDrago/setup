@@ -12,5 +12,9 @@ sudo apt update && sudo apt upgrade -y && sudo apt install git -y && git clone h
 - [ ] Fix cargo install eza and alacritty.
 - [ ] fix arch ssh setup (copy debian)
 - [ ] configure ssh agent for seemless ssh keys managing
+- [ ] AI setup
+    - [ ] codex CLI
+    - [ ] codex app
+    - [ ] AI dotfiles
 
 # Arch
